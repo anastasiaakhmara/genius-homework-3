@@ -220,9 +220,7 @@
             Як нас <span class="accent">знайти</span>
           </h2>
           <div class="contact-container">
-            <div class="contact-form">
-              <!-- form for order -->
-            </div>
+            
             <iframe
               class="contact-map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9323900545905!2d30.515600376936128!3d50.44235998794575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C70YzQstCw0YAg0KLQsNGA0LDRgdCwINCo0LXQstGH0LXQvdC60LAsIDUsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1716891732795!5m2!1suk!2sua"
@@ -232,6 +230,56 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+            <div class="contact-form">
+              
+                  <form class="modal-form" name="modal-form" autocomplete="off">
+                     <p class="modal-large-text">Запишіться <span class="modal-text-accent">безкоштовно</span> <br>
+                та отримайте подарунок</p>
+                          <div>
+                      <input type="text"
+                      id="name-surname" 
+                      name="name-surname" 
+                      class="form-input"
+                      placeholder="Ваше ім'я та прізвище"
+                      pattern="^[А-ЯҐЄІЇ]{1}[а-яґєії'\-]{2,}\s[А-ЯҐЄІЇ]{1}[а-яґєії'\-]{2,}$"
+                      required
+                      minlength="2"
+                      maxlength="20">
+                    <label for="name-surname" class="form-label visually-hidden">
+                    Ваше ім'я та прізвище
+                    </label>
+                    </div>
+                                  <div>
+                                      <input type="tel"
+                                      id="telephone-number" 
+                                      name="telephone-number"
+                                      class="form-input"
+                                      pattern="^\+[0-9]{12}"
+                                      minlength="13"
+                                      maxlength="13"
+                                      required
+                                      placeholder="Ваш номер телефону">
+                                  <label for="telephone-number" class="form-label visually-hidden">
+                                  Ваш номер телефону
+                                  </label>
+                                  </div>
+                              <div>
+                                  <input type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="Ваша електронна пошта"
+                                    required
+                                    pattern="^\S+@\S+\.\S+$">
+                              <label for="email" class="form-label visually-hidden">
+                              Ваша електронна пошта
+                              </label>
+                              </div>
+                        <button type="submit" class="contact-button">Записатись безкоштовно</button>
+                      </form>
+                        <p class="modal-text">Натискаючи на кнопку я погоджуюсь <br> <a class="modal-link" href="#"> з політикою конфіденційності</a></p>
+                  
+            </div>
           </div>
         </div>
       </section>
@@ -321,14 +369,54 @@
       <div class="modal">
         <h2  class="modal-title">Замовити <br>дзвінок</h2>
         <button type="button" class="modal-btn-close">Close</button>
-        <form class="modal-form" name="modal-form" autocomplete="on">
-<div></div>
-<div></div>
-<div></div>
-<button type="submit" class="button modal-button">Записатись безкоштовно</button>
-
-        </form>
-        <p class="modal-text">Натискаючи на кнопку я погоджуюсь <br> <a class="modal-link" href="#"> з політикою конфіденційності</a></p>
+          <form class="modal-form" name="modal-form" autocomplete="off">
+            <p class="modal-large-text">Запишіться <span class="modal-text-accent">безкоштовно</span> <br>
+                та отримайте подарунок</p>
+              <div>
+          <input type="text"
+          id="name-surname" 
+          name="name-surname" 
+          class="form-input"
+          placeholder="Ваше ім'я та прізвище"
+          pattern="^[А-ЯҐЄІЇ]{1}[а-яґєії'\-]{2,}\s[А-ЯҐЄІЇ]{1}[а-яґєії'\-]{2,}$"
+          required
+          minlength="2"
+          maxlength="20">
+        <label for="name-surname" class="form-label visually-hidden">
+        Ваше ім'я та прізвище
+        </label>
+        </div>
+                      <div>
+                          <input type="tel"
+                          id="telephone-number" 
+                          name="telephone-number"
+                          class="form-input"
+                          pattern="^\+[0-9]{12}"
+                          minlength="13"
+                          maxlength="13"
+                          required
+                          placeholder="Ваш номер телефону">
+                      <label for="telephone-number" class="form-label visually-hidden">
+                      Ваш номер телефону
+                      </label>
+                      </div>
+                  <div>
+                      <input type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Ваша електронна пошта"
+                        required
+                        pattern="^\S+@\S+\.\S+$">
+                  <label for="email" class="form-label visually-hidden">
+                  Ваша електронна пошта
+                  </label>
+                  </div>
+            <button type="submit" class=" modal-button">Записатись безкоштовно</button>
+           </form>
+            <p class="modal-text">Натискаючи на кнопку я погоджуюсь <br> <a class="modal-link" href="#"> з політикою конфіденційності</a></p>
+       </div>
+     </div>
      <script src="./modal.js"></script>
   </body>
 </html>

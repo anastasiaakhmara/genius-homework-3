@@ -79,65 +79,6 @@ h6,
 p {
     margin-top: 0;
 }
-/* шпора
-<button class="modal-btn-close" type="button">Close</button>
-        <h2>Замовити дзвінок</h2>
-        <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-        <form name="modal-form" autocomplete="off">
-          <div class="form-field">
-            <input
-              class="form-input"
-              type="text"
-              name="user-name"
-              id="user-name"
-              placeholder="Ім'я"
-              minlength="2"
-              maxlength="20"
-              required
-            />
-            <label class="form-label visually-hidden" for="user-name"
-              >Ім'я</label
-            >
-          </div>
-
-          <div class="form-field">
-            <label class="form-label visually-hidden" for="user-tel"
-              >Телефон</label
-            >
-            <input
-              class="form-input"
-              type="tel"
-              name="user-tel"
-              id="user-tel"
-              placeholder="Телефон"
-              pattern="^\+[0-9]{12}"
-              required
-            />
-          </div>
-          <div class="form-field">
-            <input
-              class="form-input"
-              type="email"
-              name="user-email"
-              id="user-email"
-              placeholder="Електронна пошта"
-              required
-            />
-            <label class="form-label visually-hidden" for="user-email"
-              >Електронна пошта</label
-            >
-          </div>
-
-          <button class="button form-button" type="submit">
-            Замовити дзвінок
-          </button>
-          <p class="form-terms">
-            Натискаючи на кнопку я погоджуюсь
-            <a class="form-terms-link" href="#">з політикою конфіденційності</a>
-          </p>
-        </form>
-      </div>
-    </div> */
 
 
 
@@ -564,6 +505,7 @@ animation-name: spin;
 /* CONTACT */
 .contact-section {
     padding-bottom: 96px;
+    
 }
 
 .contact-map {
@@ -572,7 +514,44 @@ animation-name: spin;
     border-radius: 32px;
 
 }
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+.contact-form {
+    max-width: 420px;
+        max-height: 480px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-primary-blue-dark);
+        border-radius: 48px;
+        background-image: url(./images/background-footer.svg);
+        /* overflow-y: auto; */
+        padding: 48px 56px;
+}
+.contact-button {
+    background-color: var(--color-primary-blue-light);
+    color: var(--color-primary-white);
+    border: 2px solid var(--color-primary-blue-light);
+    border-radius: 32px;
+    font-weight: 600;
+    width: 281px;
+    height: 53px;
+    cursor: pointer;
 
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+
+}
+
+.contact-button:hover {
+
+    background-color: transparent;
+}
 /* Modal */
 
 .modal-title {
@@ -582,7 +561,7 @@ animation-name: spin;
         line-height: 1.16;
         text-align: center;
         color: var(--color-primary-white);
-        margin: 42px 144px;
+        /* margin: 42px 144px; */
 }
 
 .backdrop {
@@ -604,8 +583,8 @@ animation-name: spin;
     pointer-events: none;
 }
 .modal {
-    max-width: 880px;
-    max-height: 880px;
+    max-width: 720px;
+    max-height: 680px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -614,6 +593,8 @@ animation-name: spin;
     background-color: var(--color-primary-blue-dark);
     border-radius: 48px;
     background-image: url(./images/background-footer.svg);
+    /* overflow-y: auto; */
+    padding: 42px 144px;
 }
 .modal-btn-close {
 
@@ -621,15 +602,31 @@ position: absolute;
 top: 50px;
 right: 50px;
 }
+.modal-button {
+    background-color: var(--color-primary-blue-light);
+    color: var(--color-primary-white);
+    border: 2px solid var(--color-primary-blue-light);
+    border-radius: 32px;
+    font-weight: 600;
+    width: 219px;
+    height: 53px;
+    cursor: pointer;
+   
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
 
+}
 .modal-button:hover{
-color: var(--color-primary-white);
+
+background-color: transparent;
 }
 .modal-text{
     text-align: center;
     color: var(--color-secondary-grey-light);
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    margin-top: 8px;
 }
 
 .modal-link {
@@ -640,4 +637,52 @@ color: var(--color-secondary-grey-light);
 .modal-link:hover {
     text-shadow: 1px 0 0 currentColor;
         color: var(--color-secondary-grey-light);
+}
+
+.form-input {
+    width: 310px;
+    height: 52px;
+    border: 2px solid var(--color-secondary-grey-light);
+    border-radius: 32px;
+    background-color: transparent;
+    font-size: 13px;
+    line-height: 1.17;
+    padding: 18px 32px;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: .2s;
+
+}
+.form-input::placeholder {
+  
+    color: var(--color-primary-white);
+    
+}
+
+.form-input:focus {
+    background-color: var(--color-secondary-grey-light);
+    outline: none;
+}
+.modal-form {
+display: flex;
+flex-direction: column;
+ gap: 24px;
+ align-items: center;
+}
+
+.modal-large-text {
+    text-align: center;
+    color: var(--color-primary-white);
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+
+.modal-text-accent {
+    color: var(--color-primary-blue-light);
+font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
